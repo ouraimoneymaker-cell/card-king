@@ -1,13 +1,13 @@
-# CodKing
+# CardKing
 
-**CodKing** is a **decision engine** for trading card collectors (sports cards + TCG).  
+**Carding** is a **decision engine** for trading card collectors (sports cards + TCG).  
 It turns card data into a clear recommendation: **GRADE / SELL / HOLD / BUY / PASS**.
 
 This is **not** a social network and **not** a basic collection tracker. The product exists to reduce uncertainty and help collectors make fast, confident decisions.
 
 ---
 
-## What CodKing solves
+## What Cardking solves
 
 Collectors constantly face decision overload:
 
@@ -17,7 +17,7 @@ Collectors constantly face decision overload:
 - Is now the right time to sell or hold?
 - Is this card underpriced or overpriced?
 
-CodKing answers those questions with a single, simple decision output.
+CardKing answers those questions with a single, simple decision output.
 
 ---
 
@@ -75,7 +75,7 @@ Include:
 
 ## Tech approach (recommended)
 
-CodKing can be built as a web app first (mobile-first UI), then wrapped as a native app later.
+CardKing can be built as a web app first (mobile-first UI), then wrapped as a native app later.
 
 Suggested baseline:
 - Backend: FastAPI (Python)
