@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Card King</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand__title">Card King</div>
+      <div class="brand__sub">Decision Engine</div>
+    </div>
+    <button id="scanBtn" class="btn btn--ghost" type="button" title="Camera scan coming soon">Scan</button>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h1 class="h1">Get the call.</h1>
+      <p class="muted">Enter a card and condition. Card King returns a clear decision.</p>
+
+      <label class="label">Card</label>
+      <input id="query" class="input" placeholder='e.g., "1999 Pokémon Charizard Holo 4/102"' />
+
+      <div class="row">
+        <div class="col">
+          <label class="label">Listed price (optional)</label>
+          <input id="listedPrice" class="input" inputmode="decimal" placeholder="e.g., 120.00" />
+        </div>
+        <div class="col">
+          <label class="label">Issue flag</label>
+          <label class="switch">
+            <input id="issueFlag" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric__top">
+            <span>Centering</span><span id="centeringVal" class="mono">8.5</span>
+          </div>
+          <input id="centering" type="range" min="0" max="10" step="0.1" value="8.5" />
+        </div>
+        <div class="metric">
+          <div class="metric__top">
+            <span>Corners</span><span id="cornersVal" class="mono">8.5</span>
+          </div>
+          <input id="corners" type="range" min="0" max="10" step="0.1" value="8.5" />
+        </div>
+        <div class="metric">
+          <div class="metric__top">
+            <span>Edges</span><span id="edgesVal" class="mono">8.5</span>
+          </div>
+          <input id="edges" type="range" min="0" max="10" step="0.1" value="8.5" />
+        </div>
+        <div class="metric">
+          <div class="metric__top">
+            <span>Surface</span><span id="surfaceVal" class="mono">8.5</span>
+          </div>
+          <input id="surface" type="range" min="0" max="10" step="0.1" value="8.5" />
+        </div>
+      </div>
+
+      <button id="decideBtn" class="btn btn--primary" type="button">Get Decision</button>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section class="panel panel--output">
+      <div class="output__header">
+        <div>
+          <div class="label">Decision</div>
+          <div id="decision" class="decision">—</div>
+        </div>
+        <div class="chips">
+          <div id="confidence" class="chip">Confidence: —</div>
+          <div id="risk" class="chip chip--amber">Risk: —</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card__title">Market (USD)</div>
+          <div id="market" class="card__value">—</div>
+          <div id="marketMeta" class="card__meta">—</div>
+        </div>
+        <div class="card">
+          <div class="card__title">ROI</div>
+          <div id="roi" class="card__value">—</div>
+          <div id="breakeven" class="card__meta">—</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">PSA Probabilities</div>
+        <div id="probs" class="probs">—</div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">Why</div>
+        <ul id="why" class="why"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
