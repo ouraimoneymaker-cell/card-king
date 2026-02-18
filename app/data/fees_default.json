@@ -1,0 +1,28 @@
+{
+  "currency": "USD",
+  "grading": {
+    "company": "PSA",
+    "grading_fee": 19.0,
+    "shipping_insurance": 18.0
+  },
+  "platform": {
+    "platform_fee_pct": 0.1325
+  },
+  "risk": {
+    "risk_discount_pct": 0.05
+  },
+  "grade_multipliers": {
+    "PSA10": 2.0,
+    "PSA9": 1.35,
+    "PSA8": 1.1,
+    "PSA7": 0.95,
+    "LT7": 0.8
+  },
+  "decision_thresholds": {
+    "min_expected_net_profit": 40.0,
+    "min_psa9_plus_prob": 0.7,
+    "min_comps_count": 5,
+    "max_price_spread_ratio_for_low_risk": 0.35,
+    "buy_undervalue_margin": 0.15
+  }
+}
